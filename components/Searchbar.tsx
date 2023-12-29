@@ -14,28 +14,52 @@ const isValidAmazonProductUrl = (url: string) => {
     ) {
       return true;
     }
-  } catch (error) {}
+  } catch (error) {
+    return false;
+  }
   return false;
 };
 
 const Searchbar = () => {
   const [searchPrompt, setSearchPrompt] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const isValidLink = isValidAmazonProductUrl(searchPrompt);
+
+    if (!isValidLink) {
+      return alert(isValidLink ? "Valid Link" : "Invalid Link");
+    }
+    try {
+      setIsLoading(true);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
-    <form className="flex flex-wrap gap-4 mt-12" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Enter ASIN:"
-        className="searchbar-input"
-      />
-      <button type="submit" className="searchbar-btn"></button>
-    </form>
+    <>
+      <form className="flex flex-wrap gap-4 mt-12" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={searchPrompt}
+          onChange={(e) => setSearchPrompt(e.target.value)}
+          placeholder="Enter ASIN:"
+          className="searchbar-input"
+        />
+        <button
+          type="submit"
+          className="searchbar-btn"
+          disabled={searchPrompt === ""}
+        >
+          {isLoading ? "Searching..." : "Search"}
+        </button>
+      </form>
+    </>
   );
 };
 
