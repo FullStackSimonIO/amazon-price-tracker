@@ -66,6 +66,9 @@ const Hero = () => {
           >
             Register
           </a>
+          <p className="text-xs text-gray-500 font-bold mt-2 text-center">
+            Cancel everytime
+          </p>
         </div>
         <div className="flex flex-col items-center"></div>
       </div>
