@@ -1,8 +1,19 @@
+"use client";
 import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import React from "react";
 
 const Hero = () => {
+  const [highlightedWordIndex, setHighlightedWordIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setHighlightedWordIndex((prevIndex) => (prevIndex + 1) % 3); // Assuming there are 3 highlighted words
+    }, 2000); // Adjust the interval as needed
+
+    return () => clearInterval(intervalId); // Cleanup on component unmount
+  }, []);
+
   return (
     <>
       <div className="grid place-items-center pt-20 pb-10 md:pt-28 md:pb-10 justify-center">
