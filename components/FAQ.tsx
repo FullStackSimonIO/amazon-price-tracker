@@ -24,7 +24,7 @@ const FAQ = () => {
                   shapeRendering="geometricPrecision"
                   stroke="currentColor"
                   strokeLinecap="round"
-                  stroke-strokeLinejoin="round"
+                  strokeLinejoin="round"
                   strokeWidth="1.5"
                   viewBox="0 0 24 24"
                 >
@@ -53,7 +53,7 @@ const FAQ = () => {
                   shapeRendering="geometricPrecision"
                   stroke="currentColor"
                   strokeLinecap="round"
-                  stroke-strokeLinejoin="round"
+                  strokeLinejoin="round"
                   strokeWidth="1.5"
                   viewBox="0 0 24 24"
                 >
@@ -85,7 +85,7 @@ const FAQ = () => {
                   shapeRendering="geometricPrecision"
                   stroke="currentColor"
                   strokeLinecap="round"
-                  stroke-strokeLinejoin="round"
+                  strokeLinejoin="round"
                   strokeWidth="1.5"
                   viewBox="0 0 24 24"
                 >
@@ -114,7 +114,7 @@ const FAQ = () => {
                   shapeRendering="geometricPrecision"
                   stroke="currentColor"
                   strokeLinecap="round"
-                  stroke-strokeLinejoin="round"
+                  strokeLinejoin="round"
                   strokeWidth="1.5"
                   viewBox="0 0 24 24"
                 >
@@ -141,7 +141,7 @@ const FAQ = () => {
                   shapeRendering="geometricPrecision"
                   stroke="currentColor"
                   strokeLinecap="round"
-                  stroke-strokeLinejoin="round"
+                  strokeLinejoin="round"
                   strokeWidth="1.5"
                   viewBox="0 0 24 24"
                 >
