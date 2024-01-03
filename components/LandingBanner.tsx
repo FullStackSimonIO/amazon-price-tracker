@@ -16,21 +16,35 @@ const LandingBanner = () => {
     }, 500);
 
     return () => clearInterval(marketplaceIntervalId);
-  }, []);
+  }, [marketplaceUpperLimit]);
 
   // Counter Animation for Checked Items
   const [checkedItemsCount, setCheckedItemsCount] = useState(0);
-  const checkedItemsUpperLimit = 100000;
+  const checkedItemsUpperLimit = 1000;
 
   useEffect(() => {
     const checkedItemsIntervalId = setInterval(() => {
       setCheckedItemsCount((prevCount) => {
         return prevCount >= checkedItemsUpperLimit ? prevCount : prevCount + 1;
       });
-    }, 1);
+    });
 
-    return () => clearInterval(checkedItemsCount);
-  });
+    return () => clearInterval(checkedItemsIntervalId);
+  }, [checkedItemsUpperLimit]);
+
+  // Counter Animation for Users
+  const [userCount, setUserCount] = useState(0);
+  const userUpperLimit = 200;
+
+  useEffect(() => {
+    const userIntervalId = setInterval(() => {
+      setUserCount((prevCount) => {
+        return prevCount >= userUpperLimit ? prevCount : prevCount + 1;
+      });
+    }, 10);
+
+    return () => clearInterval(userIntervalId);
+  }, [userUpperLimit]);
 
   return (
     <div>
@@ -58,13 +72,17 @@ const LandingBanner = () => {
                 {checkedItemsCount}
               </motion.h2>
               <div className="font-medium text-sm tracking-wider uppercase text-neutral-500 mt-2">
-                total items checked
+                daily items checked
               </div>
             </div>
             <div className="flex flex-col items-center py-2">
-              <h2 className="text-5xl font-bold text-neutral-900 uppercase">
-                200+
-              </h2>
+              <motion.h2
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-5xl font-bold text-neutral-900 uppercase"
+              >
+                {userCount}
+              </motion.h2>
               <div className="font-medium text-sm tracking-wider uppercase text-neutral-500 mt-2">
                 Users worldwide
               </div>
