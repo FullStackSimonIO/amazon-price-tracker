@@ -19,7 +19,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="grid place-items-center pt-20 pb-10 md:pt-28 md:pb-10 justify-center">
+      <div className="grid max-w-screen-xl m-auto place-items-center pt-20 pb-10 md:pt-28 md:pb-10 justify-center">
         <h1 className="flex flex-col gap-1 md:gap-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black lg:tracking-tight text-center">
           <div className="flex flex-wrap gap-2 md:gap-5 items-center justify-center">
             The{" "}

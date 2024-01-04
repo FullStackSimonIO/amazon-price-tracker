@@ -47,7 +47,7 @@ const LandingBanner = () => {
   }, [userUpperLimit]);
 
   return (
-    <div>
+    <div className="">
       <div className="bg-neutral-50 border-y border-neutral-200 py-8 mt-20">
         <div className="max-w-screen-xl mx-auto px-5">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:divide-x divide-neutral-200">

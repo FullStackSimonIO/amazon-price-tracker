@@ -14,7 +14,6 @@ const page = () => {
       <LandingDescription />
       <ProductCard />
       <FAQ />
-      <Footer />
     </div>
   );
 };

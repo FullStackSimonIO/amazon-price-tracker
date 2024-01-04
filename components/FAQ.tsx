@@ -3,7 +3,7 @@ import React from "react";
 const FAQ = () => {
   const open = false;
   return (
-    <div className="max-w-screen-xl mx-auto px-5">
+    <div className="max-w-screen-xl mx-auto px-5 mb-10">
       <div className="flex flex-col items-center mt-16">
         <h2 className="font-bold text-3xl md:text-5xl mt-5 tracking-tight text-center">
           FAQ
