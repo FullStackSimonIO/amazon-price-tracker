@@ -1,20 +1,27 @@
 "use client";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
-import React from "react";
+
+import React, { useEffect } from "react";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { BsFillDatabaseFill } from "react-icons/bs";
 import { MdAttachMoney } from "react-icons/md";
+import { useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Hero = () => {
-  const [highlightedWordIndex, setHighlightedWordIndex] = useState(0);
+  const controls = useAnimation();
+
+  const startAnimation = async () => {
+    await controls.start({
+      backgroundImage: [
+        "linear-gradient(to right, #fuchsia-600, #purple-600)",
+        "linear-gradient(to right, transparent, transparent)",
+      ],
+      transition: { duration: 1.5, ease: "linear", loop: Infinity },
+    });
+  };
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setHighlightedWordIndex((prevIndex) => (prevIndex + 1) % 3); // Assuming there are 3 highlighted words
-    }, 2000); // Adjust the interval as needed
-
-    return () => clearInterval(intervalId); // Cleanup on component unmount
+    startAnimation();
   }, []);
 
   return (
@@ -25,21 +32,23 @@ const Hero = () => {
             The{" "}
             <div className="relative">
               <span className="z-10 relative">price</span>
-              <span
-                className="absolute inset-0 z-20 bg-gradient-to-r bg-clip-text text-transparent animate-gradient-1 from-fuchsia-600 to-purple-600"
+              <motion.span
+                className="absolute inset-0 z-20 bg-clip-text text-transparent"
                 aria-hidden="true"
+                animate={controls}
               >
                 price
-              </span>
+              </motion.span>
             </div>
             <div className="relative">
               <span className="z-10 relative">comparison</span>
-              <span
-                className="absolute inset-0 z-20 bg-gradient-to-r bg-clip-text text-transparent animate-gradient-2 from-indigo-500 to-blue-500"
+              <motion.span
+                className="absolute inset-0 z-20 bg-clip-text text-transparent"
                 aria-hidden="true"
+                animate={controls}
               >
                 comparison
-              </span>
+              </motion.span>
             </div>
           </div>
           <div className="flex flex-wrap gap-2 md:gap-5 items-center justify-center">
