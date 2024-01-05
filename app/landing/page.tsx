@@ -5,13 +5,13 @@ import Hero from "@/components/Hero";
 import LandingBanner from "@/components/LandingBanner";
 import LandingDescription from "@/components/LandingDescription";
 import ProductCard from "@/components/ProductCard";
-import NewHero from "@/components/newHero";
+
 import React from "react";
 
 const page = () => {
   return (
     <div>
-      <NewHero />
+      <Hero />
       <LandingBanner />
       <LandingDescription />
       <ProductCard />

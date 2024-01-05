@@ -5,25 +5,8 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import { BsFillDatabaseFill } from "react-icons/bs";
 import { MdAttachMoney } from "react-icons/md";
 import { useAnimation } from "framer-motion";
-import { motion } from "framer-motion";
 
 const Hero = () => {
-  const controls = useAnimation();
-
-  const startAnimation = async () => {
-    await controls.start({
-      backgroundImage: [
-        "linear-gradient(to right, #fuchsia-600, #purple-600)",
-        "linear-gradient(to right, transparent, transparent)",
-      ],
-      transition: { duration: 1.5, ease: "linear", loop: Infinity },
-    });
-  };
-
-  useEffect(() => {
-    startAnimation();
-  }, []);
-
   return (
     <>
       <div className="grid max-w-screen-xl m-auto place-items-center pt-20 pb-10 md:pt-28 md:pb-10 justify-center">
@@ -32,23 +15,21 @@ const Hero = () => {
             The{" "}
             <div className="relative">
               <span className="z-10 relative">price</span>
-              <motion.span
-                className="absolute inset-0 z-20 bg-clip-text text-transparent"
+              <span
+                className="absolute inset-0 z-20 bg-gradient-to-r bg-clip-text text-transparent animate-gradient-3 from-red-500 to-orange-500"
                 aria-hidden="true"
-                animate={controls}
               >
                 price
-              </motion.span>
+              </span>
             </div>
             <div className="relative">
               <span className="z-10 relative">comparison</span>
-              <motion.span
-                className="absolute inset-0 z-20 bg-clip-text text-transparent"
+              <span
+                className="absolute inset-0 z-20 bg-gradient-to-r bg-clip-text text-transparent animate-gradient-3 from-red-500 to-orange-500"
                 aria-hidden="true"
-                animate={controls}
               >
                 comparison
-              </motion.span>
+              </span>
             </div>
           </div>
           <div className="flex flex-wrap gap-2 md:gap-5 items-center justify-center">
