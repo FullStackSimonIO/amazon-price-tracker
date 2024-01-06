@@ -202,6 +202,66 @@ const LandingDescription = () => {
             through our smart link system.
           </p>
         </div>
+        <div>
+          <div className="flex flex-col items-center">
+            <div className="grid md:grid-cols-2 mt-16 gap-20">
+              <div className="min-w-0 self-center">
+                <div className="px-8">
+                  <div
+                    className="overflow-y-auto"
+                    tabIndex={0}
+                    role="region"
+                    aria-label="Image Display"
+                  >
+                    <picture>
+                      <source src="" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div className="grid gap-10">
+                <div className="flex flex-col gap-4 items-start max-w-lg">
+                  <div className="mt-1 bg-neutral-50 border border-neutral-200 rounded-lg p-2 w-10 h-10 shrink-0 ">
+                    <IoMdTime size={22} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-xl underline underline-offset-2">
+                      Get your Data within Seconds:
+                    </h3>
+                    <p className="text-neutral-500 mt-2 leading-relaxed">
+                      Stop comparing graphs & data over multiple marketplaces.
+                      <br /> Get all the information you need in a few seconds
+                      over our blazingly fast API. <br />
+                      Stop wasting your precious time NOW.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-xl underline underline-offset-2">
+                      Get your Data within Seconds:
+                    </h3>
+                    <p className="text-neutral-500 mt-2 leading-relaxed">
+                      Stop comparing graphs & data over multiple marketplaces.
+                      <br /> Get all the information you need in a few seconds
+                      over our blazingly fast API. <br />
+                      Stop wasting your precious time NOW.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-xl underline underline-offset-2">
+                      Get your Data within Seconds:
+                    </h3>
+                    <p className="text-neutral-500 mt-2 leading-relaxed">
+                      Stop comparing graphs & data over multiple marketplaces.
+                      <br /> Get all the information you need in a few seconds
+                      over our blazingly fast API. <br />
+                      Stop wasting your precious time NOW.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
