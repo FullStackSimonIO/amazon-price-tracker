@@ -226,35 +226,48 @@ const LandingDescription = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-xl underline underline-offset-2">
-                      Get your Data within Seconds:
+                      Highspeed links directly to the product on your main
+                      marketplace:
                     </h3>
                     <p className="text-neutral-500 mt-2 leading-relaxed">
-                      Stop comparing graphs & data over multiple marketplaces.
-                      <br /> Get all the information you need in a few seconds
-                      over our blazingly fast API. <br />
-                      Stop wasting your precious time NOW.
+                      You found an interesting product with our App and you want
+                      to check the item out on your marketplace? <br />
+                      Maybe to check if you are allowed to sell the item? Or
+                      maybe you want to run Tools like SellerAmp or BuyBotPro
+                      over the product to get even more information about it?
+                      <br /> No problem at all, just click the link in the
+                      product card.
                     </p>
                   </div>
                   <div>
                     <h3 className="font-semibold text-xl underline underline-offset-2">
-                      Get your Data within Seconds:
+                      Ultra fast links directly to the marketplace of your
+                      choice:
                     </h3>
                     <p className="text-neutral-500 mt-2 leading-relaxed">
-                      Stop comparing graphs & data over multiple marketplaces.
-                      <br /> Get all the information you need in a few seconds
-                      over our blazingly fast API. <br />
-                      Stop wasting your precious time NOW.
+                      You found a product on a marketplace that you want to buy?{" "}
+                      <br />
+                      Just click the link of the region of your choice to
+                      directly get to the productpage of the different Amazon
+                      regions.
                     </p>
                   </div>
                   <div>
                     <h3 className="font-semibold text-xl underline underline-offset-2">
-                      Get your Data within Seconds:
+                      Support our Team with using the Ref-links without paying
+                      one penny more:
                     </h3>
                     <p className="text-neutral-500 mt-2 leading-relaxed">
-                      Stop comparing graphs & data over multiple marketplaces.
-                      <br /> Get all the information you need in a few seconds
-                      over our blazingly fast API. <br />
-                      Stop wasting your precious time NOW.
+                      We use our inhouse-built REF-Link generator behind every
+                      Amazon link we provide. This helps us to keep the project
+                      always up-to-date, fulfill the wishes of users, push
+                      regular updates & pay our team. <br />
+                      The API's, Hosting & Database costs can grow very heavily
+                      in a short time. We want to be able to provide our service
+                      as long as possible with the best quality.
+                      <br />
+                      So feel free to use our Ref-Links to support us without
+                      paying more for your items.
                     </p>
                   </div>
                 </div>
