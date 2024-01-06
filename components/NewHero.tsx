@@ -7,35 +7,65 @@ import { MdAttachMoney } from "react-icons/md";
 import { motion, useAnimation } from "framer-motion";
 
 const Hero = () => {
-  const [highlight, setHighlight] = useState(false);
-  const wordAnimationControls = useAnimation();
+  // Animation for "Price"
+  const [priceHighlight, setPriceHighlight] = useState(false);
+  const priceAnimationControls = useAnimation();
 
-  const startWordAnimation = async () => {
-    await wordAnimationControls.start({
+  const startPriceAnimation = async () => {
+    await priceAnimationControls.start({
       color: ["#000000", "#ff0000"], // von Schwarz nach Rot
       transition: { duration: 2 },
     });
 
-    // Farbwechselanimation für das Wort "comparison"
-    wordAnimationControls.start({ color: "#000000" });
+    priceAnimationControls.start({ color: "#000000" });
 
-    setHighlight(false);
+    setPriceHighlight(false);
   };
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setHighlight(true);
-      startWordAnimation();
+    const priceIntervalId = setInterval(() => {
+      setPriceHighlight(true);
+      startPriceAnimation();
     }, 6000);
 
-    const timeoutId = setTimeout(() => {
-      setHighlight(true);
-      startWordAnimation();
+    const priceTimeoutId = setTimeout(() => {
+      setPriceHighlight(true);
+      startPriceAnimation();
     }, 2000);
 
     return () => {
-      clearInterval(intervalId);
-      clearTimeout(timeoutId);
+      clearInterval(priceIntervalId);
+      clearTimeout(priceTimeoutId);
+    };
+  }, []);
+
+  // Animation for "Comparison"
+  const [comparisonHighlight, setComparisonHighlight] = useState(false);
+  const comparisonAnimationControls = useAnimation();
+
+  const startComparisonAnimation = async () => {
+    await comparisonAnimationControls.start({
+      color: ["#000000", "#ff0000"], // von Schwarz nach Rot
+      transition: { duration: 2 },
+    });
+
+    setComparisonHighlight(false);
+  };
+
+  useEffect(() => {
+    const comparisonIntervalId = setInterval(() => {
+      setComparisonHighlight(true);
+      startComparisonAnimation();
+    }, 6000);
+
+    const comparisonTimeoutId = setTimeout(() => {
+      setComparisonHighlight(true);
+      startComparisonAnimation();
+    }, 2000);
+
+    return () => {
+      clearInterval(comparisonIntervalId);
+      clearTimeout(comparisonTimeoutId);
     };
   }, []);
 
@@ -45,32 +75,38 @@ const Hero = () => {
         <h1 className="flex flex-col gap-1 md:gap-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black lg:tracking-tight text-center">
           <div className="flex flex-wrap gap-2 md:gap-5 items-center justify-center">
             The{" "}
-            <motion.div className="relative" animate={wordAnimationControls}>
+            <motion.div className="relative" animate={priceAnimationControls}>
               <span className="z-10 relative">price</span>
               <span
                 className={`absolute inset-0 z-20 bg-gradient-to-r bg-clip-text text-transparent animate-gradient-3 ${
-                  highlight ? "visible" : "invisible"
+                  priceHighlight ? "visible" : "invisible"
                 }`}
                 aria-hidden="true"
               >
                 price
               </span>
             </motion.div>
-            <div className="relative">
+            <motion.div
+              className="relative"
+              animate={comparisonAnimationControls}
+            >
               <span className="z-10 relative">comparison</span>
               <span
-                className="absolute inset-0 z-20 bg-gradient-to-r bg-clip-text text-transparent animate-gradient-3 from-red-500 to-orange-500"
-                aria-hidden="true"
-              ></span>
-            </div>
+                className={`absolute inset-0 z-20 bg-gradient-to-r bg-clip-text text-transparent animate-gradient-3 ${
+                  comparisonHighlight ? "visible" : "invisible"
+                }`}
+              >
+                comparison
+              </span>
+            </motion.div>
           </div>
           <div className="flex flex-wrap gap-2 md:gap-5 items-center justify-center">
             tool for{" "}
-            <motion.div className="relative" animate={wordAnimationControls}>
+            <motion.div className="relative" animate={{}}>
               <span className="z-10 relative">Amazon</span>
               <span
                 className={`absolute inset-0 z-20 bg-gradient-to-r bg-clip-text text-transparent animate-gradient-3 ${
-                  highlight ? "visible" : "invisible"
+                  comparisonHighlight ? "visible" : "invisible"
                 }`}
                 aria-hidden="true"
               >
