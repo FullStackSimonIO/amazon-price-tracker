@@ -69,6 +69,36 @@ const Hero = () => {
     };
   }, []);
 
+  // Animation for "Amazon"
+  const [amazonHighlight, setAmazonHighlight] = useState(false);
+  const amazonAnimationControls = useAnimation();
+
+  const startAmazonAnimation = async () => {
+    await comparisonAnimationControls.start({
+      color: ["#000000", "#ff0000"], // von Schwarz nach Rot
+      transition: { duration: 2 },
+    });
+
+    setComparisonHighlight(false);
+  };
+
+  useEffect(() => {
+    const comparisonIntervalId = setInterval(() => {
+      setAmazonHighlight(true);
+      startAmazonAnimation();
+    }, 6000);
+
+    const comparisonTimeoutId = setTimeout(() => {
+      setAmazonHighlight(true);
+      startAmazonAnimation();
+    }, 2000);
+
+    return () => {
+      clearInterval(comparisonIntervalId);
+      clearTimeout(comparisonTimeoutId);
+    };
+  }, []);
+
   return (
     <>
       <div className="grid max-w-screen-xl m-auto place-items-center pt-20 pb-10 md:pt-28 md:pb-10 justify-center">
