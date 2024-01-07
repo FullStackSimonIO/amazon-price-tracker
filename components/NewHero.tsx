@@ -74,28 +74,28 @@ const Hero = () => {
   const amazonAnimationControls = useAnimation();
 
   const startAmazonAnimation = async () => {
-    await comparisonAnimationControls.start({
+    await amazonAnimationControls.start({
       color: ["#000000", "#ff0000"], // von Schwarz nach Rot
       transition: { duration: 2 },
     });
 
-    setComparisonHighlight(false);
+    setAmazonHighlight(false);
   };
 
   useEffect(() => {
-    const comparisonIntervalId = setInterval(() => {
+    const amazonIntervalId = setInterval(() => {
       setAmazonHighlight(true);
       startAmazonAnimation();
     }, 6000);
 
-    const comparisonTimeoutId = setTimeout(() => {
+    const amazonTimeoutId = setTimeout(() => {
       setAmazonHighlight(true);
       startAmazonAnimation();
     }, 2000);
 
     return () => {
-      clearInterval(comparisonIntervalId);
-      clearTimeout(comparisonTimeoutId);
+      clearInterval(amazonIntervalId);
+      clearTimeout(amazonTimeoutId);
     };
   }, []);
 
@@ -132,11 +132,11 @@ const Hero = () => {
           </div>
           <div className="flex flex-wrap gap-2 md:gap-5 items-center justify-center">
             tool for{" "}
-            <motion.div className="relative" animate={{}}>
+            <motion.div className="relative" animate={amazonAnimationControls}>
               <span className="z-10 relative">Amazon</span>
               <span
                 className={`absolute inset-0 z-20 bg-gradient-to-r bg-clip-text text-transparent animate-gradient-3 ${
-                  comparisonHighlight ? "visible" : "invisible"
+                  amazonHighlight ? "visible" : "invisible"
                 }`}
                 aria-hidden="true"
               >
