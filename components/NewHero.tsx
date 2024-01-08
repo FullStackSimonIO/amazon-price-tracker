@@ -100,32 +100,32 @@ const Hero = () => {
   }, []);
 
   // Animation for "sellers"
-  const [comparisonHighlight, setComparisonHighlight] = useState(false);
-  const comparisonAnimationControls = useAnimation();
+  const [sellerHighlight, setSellerHighlight] = useState(false);
+  const comparisonSellerControls = useAnimation();
 
-  const startComparisonAnimation = async () => {
-    await comparisonAnimationControls.start({
+  const startSellerAnimation = async () => {
+    await comparisonSellerControls.start({
       color: ["#000000", "#ff0000"], // von Schwarz nach Rot
       transition: { duration: 2 },
     });
 
-    setComparisonHighlight(false);
+    setSellerHighlight(false);
   };
 
   useEffect(() => {
-    const comparisonIntervalId = setInterval(() => {
-      setComparisonHighlight(true);
-      startComparisonAnimation();
+    const sellerIntervalId = setInterval(() => {
+      setSellerHighlight(true);
+      startSellerAnimation();
     }, 6000);
 
-    const comparisonTimeoutId = setTimeout(() => {
-      setComparisonHighlight(true);
-      startComparisonAnimation();
+    const sellerTimeoutId = setTimeout(() => {
+      setSellerHighlight(true);
+      startSellerAnimation();
     }, 2000);
 
     return () => {
-      clearInterval(comparisonIntervalId);
-      clearTimeout(comparisonTimeoutId);
+      clearInterval(sellerIntervalId);
+      clearTimeout(sellerTimeoutId);
     };
   }, []);
 
