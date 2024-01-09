@@ -1,6 +1,13 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const Navbar = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
   return (
     <div className="max-w-screen-xl mx-auto px-5">
       <header className="flex flex-col lg:flex-row justify-between items-center my-5">
@@ -16,28 +23,44 @@ const Navbar = () => {
             />
           </a>
           <div className="block lg:hidden">
-            <button className="text-neutral-800">
-              <svg
-                fill="currentColor"
-                className="w-4 h-4"
-                viewBox="0 0 20 20"
-                xmlns="http://w3.org/2000/svg"
-              >
-                <title>Menu</title>
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"
-                ></path>
-                <path
-                  fillRule="evenodd"
-                  d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"
-                ></path>
-              </svg>
+            <button className="text-neutral-800" onClick={toggleMenu}>
+              {isMenuOpen ? (
+                <svg
+                  fill="currentColor"
+                  className="w-4 h-4"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Close</title>
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  fill="currentColor"
+                  className="w-4 h-4"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Menu</title>
+
+                  <path
+                    fillRule="evenodd"
+                    d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"
+                  />
+                </svg>
+              )}
             </button>
           </div>
         </div>
-        <nav className="hidden w-full lg:w-auto lg:flex absolute lg:static bg-white top-0 mt-4 px-5 pb-5 pt-12 shadow-2xl lg:shadow-none lg:p-0 z-10">
+        <nav
+          className={`w-full lg:w-auto lg:flex absolute lg:static bg-white top-0 mt-4 px-5 pb-5 pt-12 shadow-2xl lg:shadow-none lg:p-0 z-10 ${
+            isMenuOpen ? "z-30" : "z-10"
+          } ${isMenuOpen ? "block" : "hidden"}`}
+        >
           <ul className="flex flex-col lg:flex-row lg:gap-10">
             <li>
               <a
@@ -64,7 +87,6 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          <div className="lg:hidden flex items-center mt-3 gap-4"></div>
         </nav>
         <div>
           <div className="hidden lg:flex items-center gap-4">

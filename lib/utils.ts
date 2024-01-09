@@ -25,7 +25,7 @@ export function extractCurrency(element: any) {
 }
 
 // Calculates Highest Price of Database
-export function getHighestPrice(priceList: PriceHistoryItem[]) {
+/*export function getHighestPrice(priceList: PriceHistoryItem[]) {
   let highestPrice = priceList[0];
 
   for (let i = 0; i < priceList.length; i++) {
@@ -53,7 +53,7 @@ export function getAveragePrice(priceList: PriceHistoryItem[]) {
   const averagePrice = sumOfPrices / priceList.length || 0;
 
   return averagePrice;
-}
+}*/
 
 export const formatNumber = (num: number = 0) => {
   return num.toLocaleString(undefined, {
