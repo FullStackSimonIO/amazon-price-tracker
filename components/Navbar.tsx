@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className="max-w-screen-xl mx-auto px-5">
       <header className="flex flex-col lg:flex-row justify-between items-center my-5">
-        <div className="flex w-full lg:w-auto items-center justify-between relative z-20">
+        <div className="flex w-full lg:w-auto items-center justify-between relative z-50">
           <a href="/landing">
             <img
               src=""
@@ -57,8 +57,7 @@ const Navbar = () => {
           </div>
         </div>
         <nav
-          className={`w-full lg:w-auto lg:flex absolute lg:static bg-white top-0 mt-4 px-5 pb-5 pt-12 shadow-2xl lg:shadow-none lg:p-0 z-10 ${
-            isMenuOpen ? "z-30" : "z-10"
+          className={`w-full lg:w-auto lg:flex absolute lg:static bg-white top-0 mt-4 px-5 pb-5 pt-12 shadow-2xl lg:shadow-none lg:p-0 z-40
           } ${isMenuOpen ? "block" : "hidden"}`}
         >
           <ul className="flex flex-col lg:flex-row lg:gap-10">
@@ -84,6 +83,22 @@ const Navbar = () => {
                 className="flex lg:px-3 py-2 text-neutral-600 hover:text-neutral-900 text-bold"
               >
                 Contact
+              </a>
+            </li>
+            <li>
+              <a
+                href="/login"
+                className="flex lg:px-3 py-2 text-neutral-600 hover:text-neutral-900 text-bold"
+              >
+                Login
+              </a>
+            </li>
+            <li>
+              <a
+                href="/contact"
+                className="flex lg:px-3 py-2 text-neutral-600 hover:text-neutral-900 text-bold"
+              >
+                Sign up
               </a>
             </li>
           </ul>
