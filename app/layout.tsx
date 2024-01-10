@@ -12,7 +12,7 @@ const space_grotest = Space_Grotesk({
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: "Amazon Price Tracker",
+  title: "PricePilot | Compare prices marketwide",
   description:
     "Track Amazon pricing from different marketplaces and compare them.",
 };

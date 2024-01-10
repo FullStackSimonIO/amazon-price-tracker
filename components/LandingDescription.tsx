@@ -188,10 +188,10 @@ const LandingDescription = () => {
       <section className="mt-10">
         <div className="flex flex-col items-center text-center">
           <div className="h-24 w-0.5 bg-gradient-to-t -translate-x-1/2 from-indigo-500 "></div>
-          <div className="grid place-items-center text-white font-semibold w-10 h-10 bg-gradient-to-b rounded-full from-indigo-500 to-blue-500">
+          <div className="grid place-items-center text-white font-semibold w-10 h-10 bg-gradient-to-b rounded-full from-fuchsia-600 to-purple-600">
             3
           </div>
-          <div className="text-transparent text-xl md:text-3xl font-bold bg-clip-text mt-5 bg-gradient-to-r from-indigo-500 to-blue-500">
+          <div className="text-transparent text-xl md:text-3xl font-bold bg-clip-text mt-5 bg-gradient-to-r from-fuchsia-600 to-purple-600">
             <span>Buy</span>
           </div>
           <h2 className="font-bold text-3xl md:text-5xl mt-5 tracking-tight">

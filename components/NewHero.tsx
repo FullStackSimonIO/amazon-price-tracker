@@ -56,12 +56,12 @@ const Hero = () => {
     const comparisonIntervalId = setInterval(() => {
       setComparisonHighlight(true);
       startComparisonAnimation();
-    }, 6000);
+    }, 8000);
 
     const comparisonTimeoutId = setTimeout(() => {
       setComparisonHighlight(true);
       startComparisonAnimation();
-    }, 2000);
+    }, 4000);
 
     return () => {
       clearInterval(comparisonIntervalId);
@@ -86,12 +86,12 @@ const Hero = () => {
     const amazonIntervalId = setInterval(() => {
       setAmazonHighlight(true);
       startAmazonAnimation();
-    }, 6000);
+    }, 12000);
 
     const amazonTimeoutId = setTimeout(() => {
       setAmazonHighlight(true);
       startAmazonAnimation();
-    }, 2000);
+    }, 6000);
 
     return () => {
       clearInterval(amazonIntervalId);

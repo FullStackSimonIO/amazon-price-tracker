@@ -14,7 +14,7 @@ const Footer = () => {
                   alt="FlowBite Logo"
                 />
                 <span className="self-center text-2xl font-semibold whitespace-nowrap ">
-                  FullStackSimon
+                  PricePilot
                 </span>
               </a>
             </div>
@@ -83,15 +83,15 @@ const Footer = () => {
           </div>
           <div className="flex flex-col items-center mt-14">
             <p className="text-center text-xs text-neutral-800 font-bold">
-              XXX is using Amazon affiliate links. You don't pay one penny more
-              using our provided links, but you support our project and help us
-              to pay the API, hosting & database costs. We only use our
-              webscraping services to access data, that is publically available
-              and not hidden behind any paywall. All trademarks, service marks,
-              and copyrights mentioned on the websites we scrape are the
-              property of their respective owners. XXX neither claims nor
-              implies any rights to these trademarks, copyrights, or other
-              intellectual property.
+              PricePilot is using Amazon affiliate links. You don't pay one
+              penny more using our provided links, but you support our project
+              and help us to pay the API, hosting & database costs. We only use
+              our webscraping services to access data, that is publically
+              available and not hidden behind any paywall. All trademarks,
+              service marks, and copyrights mentioned on the websites we scrape
+              are the property of their respective owners. PricePilot neither
+              claims nor implies any rights to these trademarks, copyrights, or
+              other intellectual property.
             </p>
           </div>
           <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />

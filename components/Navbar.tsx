@@ -85,18 +85,18 @@ const Navbar = () => {
                 Contact
               </a>
             </li>
-            <li>
+            <li className="md:hidden">
               <a
                 href="/login"
-                className="flex lg:px-3 py-2 text-neutral-600 hover:text-neutral-900 text-bold md:hidden"
+                className="flex lg:px-3 py-2 text-neutral-600 hover:text-neutral-900 text-bold"
               >
                 Login
               </a>
             </li>
-            <li>
+            <li className="md:hidden">
               <a
                 href="/contact"
-                className="flex lg:px-3 py-2 text-neutral-600 hover:text-neutral-900 text-bold md:hidden"
+                className="flex lg:px-3 py-2 text-neutral-600 hover:text-neutral-900 text-bold"
               >
                 Sign up
               </a>

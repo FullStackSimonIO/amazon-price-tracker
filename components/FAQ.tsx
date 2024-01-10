@@ -16,7 +16,9 @@ const FAQ = () => {
         <div className="py-5">
           <details className="group">
             <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-              <span>Why should i choose this service as an Amazon seller</span>
+              <span>
+                Why should I choose this service <br /> as an Amazon seller
+              </span>
               <span className="transition group-open:rotate-180">
                 <svg
                   fill="none"
