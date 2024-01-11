@@ -25,15 +25,12 @@ const Footer = () => {
                 </h2>
                 <ul className="text-gray-600 ">
                   <li className="mb-4">
-                    <a href="https://flowbite.com" className="hover:underline">
+                    <a href="/contact" className="hover:underline">
                       Contact us
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="https://tailwindcss.com/"
-                      className="hover:underline"
-                    >
+                    <a href="/guide" className="hover:underline">
                       How to use
                     </a>
                   </li>
