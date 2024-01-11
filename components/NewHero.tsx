@@ -26,12 +26,12 @@ const Hero = () => {
     const priceIntervalId = setInterval(() => {
       setPriceHighlight(true);
       startPriceAnimation();
-    }, 6000);
+    }, 2000);
 
     const priceTimeoutId = setTimeout(() => {
       setPriceHighlight(true);
       startPriceAnimation();
-    }, 2000);
+    }, 6000);
 
     return () => {
       clearInterval(priceIntervalId);
@@ -56,12 +56,12 @@ const Hero = () => {
     const comparisonIntervalId = setInterval(() => {
       setComparisonHighlight(true);
       startComparisonAnimation();
-    }, 8000);
+    }, 4000);
 
     const comparisonTimeoutId = setTimeout(() => {
       setComparisonHighlight(true);
       startComparisonAnimation();
-    }, 4000);
+    }, 8000);
 
     return () => {
       clearInterval(comparisonIntervalId);
@@ -86,12 +86,12 @@ const Hero = () => {
     const amazonIntervalId = setInterval(() => {
       setAmazonHighlight(true);
       startAmazonAnimation();
-    }, 12000);
+    }, 5000);
 
     const amazonTimeoutId = setTimeout(() => {
       setAmazonHighlight(true);
       startAmazonAnimation();
-    }, 6000);
+    }, 8000);
 
     return () => {
       clearInterval(amazonIntervalId);
@@ -116,12 +116,12 @@ const Hero = () => {
     const sellerIntervalId = setInterval(() => {
       setSellerHighlight(true);
       startSellerAnimation();
-    }, 6000);
+    }, 10000);
 
     const sellerTimeoutId = setTimeout(() => {
       setSellerHighlight(true);
       startSellerAnimation();
-    }, 2000);
+    }, 6000);
 
     return () => {
       clearInterval(sellerIntervalId);
