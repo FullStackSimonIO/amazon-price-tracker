@@ -20,7 +20,7 @@ const Home = () => {
             </p>
             <h1 className="head-text">
               Unleash the Power of{" "}
-              <span className="text-primary">Online Arbitrage</span>
+              <span className="text-blue-700">Online Arbitrage</span>
             </h1>
             <p className="mt-6">
               Powerful, across market price, profit and sale analysis for Amazon

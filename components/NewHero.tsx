@@ -212,7 +212,7 @@ const Hero = () => {
               href="#"
               className=" text-center  focus-visible:ring-2 ring-offset-2 ring-neutral-200   hover:bg-neutral-100   flex gap-2 items-center justify-center bg-white text-black border-2 border-black py-3 px-6 rounded-lg transition duration-250 ease-in-out transform hover:scale-105 hover:shadow-lg"
             >
-              Check it out!
+              Check the Guide!
             </a>
           </div>
         </div>
