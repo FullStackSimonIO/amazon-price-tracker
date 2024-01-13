@@ -13,7 +13,7 @@ const Hero = () => {
 
   const startPriceAnimation = async () => {
     await priceAnimationControls.start({
-      color: ["#000000", "#ff0000"], // von Schwarz nach Rot
+      color: ["#000000", "#1d4ed8"], // von Schwarz nach Rot
       transition: { duration: 2 },
     });
 
@@ -45,7 +45,7 @@ const Hero = () => {
 
   const startComparisonAnimation = async () => {
     await comparisonAnimationControls.start({
-      color: ["#000000", "#ff0000"], // von Schwarz nach Rot
+      color: ["#000000", "#1d4ed8"], // von Schwarz nach Rot
       transition: { duration: 2 },
     });
 
@@ -75,7 +75,7 @@ const Hero = () => {
 
   const startAmazonAnimation = async () => {
     await amazonAnimationControls.start({
-      color: ["#000000", "#ff0000"], // von Schwarz nach Rot
+      color: ["#000000", "#1d4ed8"], // von Schwarz nach Rot
       transition: { duration: 2 },
     });
 
