@@ -60,8 +60,8 @@ const ProductCard = () => {
           </div>
         </div>
         <div>
-          <div className="flex flex-col w-full order-first lg:order-none border py-5 px-6 relative rounded-lg transition duration-250 ease-in-out transform hover:scale-105 hover:shadow-lg  border-orange-500 hover:shadow-orange-200 ">
-            <span className="inline-flex absolute px-3 py-1 text-xs -top-3 left-1/2 -translate-x-1/2 font-medium rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white ">
+          <div className="flex flex-col w-full order-first lg:order-none border py-5 px-6 relative rounded-lg transition duration-250 ease-in-out transform hover:scale-105 hover:shadow-lg  border-blue-700 hover:shadow-blue-200 ">
+            <span className="inline-flex absolute px-3 py-1 text-xs -top-3 left-1/2 -translate-x-1/2 font-medium rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white ">
               Most popular
             </span>
             <div>
