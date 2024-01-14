@@ -1,3 +1,8 @@
+import { PriceHistoryItem } from "@/types";
+import { Notification } from "@/lib/nodemailer";
+import { Product } from "@/types";
+import { THRESHOLD_PERCENTAGE } from "@/lib/nodemailer";
+
 // Extracts and returns price from list of possible items
 export function extractPrice(...elements: any) {
   for (const element of elements) {
