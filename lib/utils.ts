@@ -1,4 +1,4 @@
-import { PriceHistoryItem } from "@/types";
+import { PriceHistoryItem, Product } from "@/types";
 import { Notification } from "@/lib/nodemailer";
 import { Product } from "@/types";
 import { THRESHOLD_PERCENTAGE } from "@/lib/nodemailer";
