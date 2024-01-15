@@ -7,12 +7,14 @@ import LandingDescription from "@/components/LandingDescription";
 import ProductCard from "@/components/ProductCard";
 
 import React from "react";
+import Cookies from "@/components/Cookies";
 
 const page = () => {
   return (
     <div>
       <NewHero />
       <LandingBanner />
+      <Cookies />
       <LandingDescription />
       <ProductCard />
       <FAQ />
