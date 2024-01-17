@@ -176,7 +176,7 @@ const LandingDescription = () => {
                     gravida leo. Maecenas id tincidunt velit, nec feugiat dolor.
                     Quisque porta fringilla enim in efficitur. Aliquam facilisis
                     tincidunt nisi a venenatis. Ut efficitur lorem eros, a
-                    egestas risus gravida at.
+                    egestas risus gravida at. Lorem ipsum
                   </p>
                 </div>
               </div>
