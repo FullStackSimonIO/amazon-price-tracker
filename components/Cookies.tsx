@@ -4,7 +4,7 @@ import { CookieConsent } from "react-cookie-consent";
 const Cookies = () => {
   return (
     <div>
-      <CookieConsent>Test Cookie Banner</CookieConsent>
+      <CookieConsent>This website is using cookies.</CookieConsent>
     </div>
   );
 };
