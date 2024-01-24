@@ -5,7 +5,7 @@ const Cookies = () => {
   return (
     <div>
       <CookieConsent>
-        This Website is using cookies per personalized experience
+        This website is using cookies per personalized experience
       </CookieConsent>
     </div>
   );
